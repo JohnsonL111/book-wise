@@ -8,6 +8,13 @@ const app = express();
 // middleware to allow express to parse request payload
 app.use(express.json());
 
+// middlware to handle CORS
+app.use(cors({
+    origin: 'https://localhost:3000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type']
+}))
+
 app.get("/", (request, response) => {
   console.log(request);
   return response.status(234).send("lets go");
