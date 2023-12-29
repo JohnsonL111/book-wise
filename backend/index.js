@@ -49,13 +49,37 @@ app.get('/books', async (request, response) => {
         // finds all books that match the criteria in object
         const books = await Book.find({})
 
-        return response.status(200).json(books);
+        // structure response to return the length and the data
+        return response.status(200).json({
+            count: books.length,
+            data: books
+        });
 
     } catch (error) {
         console.log(error.message)
         response.status(500).send({message: error.message})
     }
 })
+
+// route to get a book from db by id
+app.get('/books/:id', async (request, response) => {
+    try {
+        const {id} = request.params
+
+        // finds book by id
+        const book = await Book.findById(id)
+
+        // structure response to return the length and the data
+        return response.status(200).json(book)
+
+    } catch (error) {
+        console.log(error.message)
+        response.status(500).send({message: error.message})
+    }
+})
+
+
+
 
 mongoose
     .connect(mongoDBURL)
