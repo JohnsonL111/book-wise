@@ -73,15 +73,14 @@ app.put("/books/:id", async (request, response) => {
       });
     }
 
-    const {id} = request.params;
+    const { id } = request.params;
 
     const result = await Book.findByIdAndUpdate(id, request.body);
     if (!result) {
-        return response.status(404).json({message: 'book not found'})
+      return response.status(404).json({ message: "book not found" });
     }
 
-    return response.status(200).send({message: 'Book updated successfully'})
-
+    return response.status(200).send({ message: "Book updated successfully" });
   } catch (error) {
     console.log(error.message);
     response.status(500).send({ message: error.message });
@@ -98,6 +97,24 @@ app.get("/books/:id", async (request, response) => {
 
     // structure response to return the length and the data
     return response.status(200).json(book);
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+
+// route to delete a book
+app.delete("/books/:id", async (request, response) => {
+  try {
+    const { id } = request.params;
+
+    const result = await Book.findByIdAndDelete(id);
+
+    if (!result) {
+      return response.status(404).json({ message: "book not found" });
+    }
+
+    return response.status(200).send({ message: "book deleted successfully" });
   } catch (error) {
     console.log(error.message);
     response.status(500).send({ message: error.message });
