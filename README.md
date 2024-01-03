@@ -1,2 +1,21 @@
-# bookstore-mern
-Bookstore project made using the MERN stack
+# BookWise
+
+## Description
+
+Goodreads clone
+
+Tech Stack: nodejs, expressjs, mongoDB, mongoose, ReactJs, tailwind, vite, axios
+
+## Images
+
+
+## Features
+
+- Book collection CRUD
+
+## What's next
+
+- Implementing AWS S3/SES somewhere
+- Add login using Auth0
+- Add commenting feature
+- Add ratings feature (just another prop)
