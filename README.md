@@ -12,10 +12,11 @@ Tech Stack: nodejs, expressjs, mongoDB, mongoose, ReactJs, tailwind, vite, axios
 ## Features
 
 - Book collection CRUD
+- Table/Card UI & modal view
 
 ## What's next
 
-- Implementing AWS S3/SES somewhere
+- Implementing AWS S3/SES somewhere??
 - Add login using Auth0
 - Add commenting feature
 - Add ratings feature (just another prop)
