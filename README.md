@@ -7,7 +7,7 @@ Goodreads clone
 Tech Stack: nodejs, expressjs, mongoDB, mongoose, ReactJs, tailwind, vite, axios
 
 ## Images
-
+![book_list](./assets/book_list.png)
 
 ## Features
 
