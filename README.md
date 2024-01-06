@@ -12,7 +12,8 @@ Tech Stack: nodejs, expressjs, mongoDB, mongoose, ReactJs, tailwind, vite, axios
 ## Features
 
 - Book collection CRUD
-- Table/Card UI & modal view
+- Table/Card UI, modals, and snackbar alerts
+- Abstract DB operations using mongoose
 
 ## What's next
 
